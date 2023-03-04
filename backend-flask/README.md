@@ -1,3 +1,5 @@
+'''docker run --rm -p 4566:4567 -it -e FRONTEND_URL="*" -e BACKEND_URL="*" backend-flask'''
+
 # Install python version
 ```
 pyenv install 3.10.9
@@ -22,3 +24,13 @@ source venv/bin/activate
 ```
 pip install flask
 ```
+
+# Build Docker container
+'''
+docker build -t backend-flask ./backend-flask
+'''
+
+# Run Container
+'''
+docker run --rm -p 4567:4567 -it backend-flask
+'''
