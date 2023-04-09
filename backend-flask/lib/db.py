@@ -28,12 +28,7 @@ class Db:
     self.pool = ConnectionPool(connection_url)
   # we want to commit data such as an insert
   # be sure to check for RETURNING in all uppercases
-  def print_params(self,params):
-    blue = '\033[94m'
-    no_color = '\033[0m'
-    print(f'{blue} SQL Params:{no_color}')
-    for key, value in params.items():
-      print(key, ":", value)
+  
 
   def print_sql(self,title,sql):
     cyan = '\033[96m'
