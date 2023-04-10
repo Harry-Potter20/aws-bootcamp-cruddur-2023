@@ -1,10 +1,3 @@
-FROM node:16.18
+FROM nginx
 
-ENV PORT=3000
-
-COPY package.json .
-RUN npm install
-COPY . /frontend-react-js
-WORKDIR /frontend-react-js
-EXPOSE ${PORT}
-CMD ["npm", "start"]
+COPY build /usr/share/nginx/html
