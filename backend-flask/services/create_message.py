@@ -2,7 +2,6 @@ from datetime import datetime, timedelta, timezone
 
 from lib.db import db
 from lib.ddb import Ddb
-from lib.momento import MomentoCounter
 
 class CreateMessage:
   # mode indicates if we want to create a new message_group or using an existing one
