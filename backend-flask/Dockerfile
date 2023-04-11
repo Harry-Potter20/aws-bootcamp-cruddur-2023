@@ -12,7 +12,7 @@ COPY . .
 
 #Set Environment Variables
 #Inside Container and will remain set while the container is running
-#ENV FLASK_ENV=development
+ENV FLASK_ENV=development
 #python -m flask run --host=0.0.0.0 --port=4567
 EXPOSE ${PORT}
 CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
